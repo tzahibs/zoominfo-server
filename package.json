@@ -1,0 +1,33 @@
+{
+  "name": "node-js",
+  "version": "0.3.0",
+  "description": "Node.js",
+  "engines": {
+    "node": ">=10"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon --inspect index.js"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.3",
+    "body-parser": "^1.18.3",
+    "config": "^3.1.0",
+    "cross-env": "^5.2.0",
+    "dotenv": "^6.2.0",
+    "ejs": "^2.5.6",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.0",
+    "lodash": "^4.17.15",
+    "md5": "^2.2.1",
+    "morgan": "^1.9.1",
+    "mysql": "^2.16.0",
+    "nodemailer": "^5.1.1",
+    "sendgrid": "^5.2.3"
+  },
+  "devDependencies": {
+    "request": "^2.88.0",
+    "tape": "^4.10.1"
+  }
+}
