@@ -7,8 +7,8 @@ class ProfilesCtrl {
 
     async request(){
        const {value,by,search}  = this.data
-       var extended = this.notEmpty(search) ? ` WHERE name LIKE '%${search}%' OR title LIKE '%${search}%' OR location LIKE '%${search}%' OR hq_phone LIKE '%${search}%' OR email LIKE '%${search}%'` : ""
-       var query =  `SELECT * FROM profiles ${extended} ORDER BY ${value} ${by} `
+       var extended = this.notEmpty(search) ? ` WHERE name LIKE '%${search}%' OR title LIKE '%${search}%' OR location LIKE '%${search}%' OR hq_phone LIKE '%${search}%' OR email LIKE '%${search}%'  OR \`update\` LIKE '%${search}%'` : ""
+       var query =  `SELECT * FROM profiles ${extended} ORDER BY \`${value}\` ${by} `
        console.log(query)
        return await this.sql.getQuery(query)
     }
